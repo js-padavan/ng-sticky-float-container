@@ -26,7 +26,7 @@ gulp.task('index', function () {
   var target = gulp.src('demo/index.html');
   var sources = gulp.src(['**/*.js'], {cwd: 'src', read: false});
 
-  return target.pipe(inject(sources)).pipe(gulp.dest('./dist'));
+  return target.pipe(inject(sources, {addRootSlash: false})).pipe(gulp.dest('./dist'));
 });
 
 gulp.task('js', function() {
