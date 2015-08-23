@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ngSticky demo</title>
+  <style>
+
+    html, body {
+      background-color: white;
+      padding: 0;
+      margin: 0;
+    }
+    .header {
+      background-color: #0b465a;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      padding-left: 20px;
+    }
+
+    .container {
+      width: 1100px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .sidebar {
+      width: 250px;
+      height: 1500px;
+      background-color: #1b5c71;
+      float: left;
+      position: fixed;
+      top: 70px;
+      overflow: hidden;
+    }
+
+    .mainblock {
+      padding: 20px;
+      width: 830px;
+      height: 5000px;
+      background: linear-gradient(#7bacbc, #0B465A);
+      margin-left: 260px;
+      margin-top: 10px;
+      text-align: center;
+      outline: 0;
+    }
+
+    .Btn {
+      margin: 10px auto;
+      display: block;
+      height: 40px;
+      border: 2px solid #7AABBB;
+      background-color: transparent;
+      border-radius: 4px;
+      padding: 0 20px;
+      color: white;
+      line-height: 40px;
+      cursor: pointer;
+    }
+
+    .title {
+      color: white;
+      text-align: center;
+    }
+  </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- inject:js -->
+
+  <!-- endinject -->
+
+
+  <!-- init app script -->
+  <script>
+    angular.module('app', ['ng-sticky'])
+    .controller('DemoCtrl', function($scope) {
+      $scope.height = 300;
+      $scope.changeHeight = function() {
+        if ($scope.height === 1500) {
+          $scope.height = 300;
+        } else {
+          $scope.height = 1500;
+        }
+      }
+    })
+
+  </script>
+</head>
+<body ng-app="app">
+
+  <div class="header">header</div>
+  <div class="container" ng-controller="DemoCtrl">
+
+    <div sticky-float-container class="sidebar" ng-style="{'height' : height + 'px'}">
+      <div class="title"><h2>!!Sticky block!!</h2></div>
+      <button class="Btn" ng-click="changeHeight()">Change height</button>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quasi, quod odit eum nostrum accusamus quas officiis consectetur dolores eos ullam fugit dignissimos, provident laudantium maiores doloribus delectus, minus nihil.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eaque hic totam eligendi, id nobis quaerat dolorem numquam asperiores praesentium doloribus, pariatur tenetur repellat commodi obcaecati. Velit, saepe, eius.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex eveniet, in, accusantium minima et quos reprehenderit nemo inventore similique id dolor illo eius placeat vel qui. Illo placeat corrupti, impedit.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste temporibus blanditiis eligendi sed a, perspiciatis saepe, vel obcaecati deleniti perferendis repellat ea adipisci hic quam nostrum magni, dicta cupiditate laboriosam.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem in, harum ex tempora amet voluptas! Consequuntur nemo, minus nulla fugiat nobis temporibus quisquam ratione facere non corporis iusto, quod!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur, nemo reiciendis maxime cumque distinctio, inventore magnam vitae quasi deserunt ad rerum dolores earum. Neque, omnis iste! Commodi, sit, dolorem.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minus animi, tenetur modi est fugit possimus nisi, quis sit magni, culpa, laudantium quam enim. Ad delectus beatae, ipsum explicabo dolore!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minus animi, tenetur modi est fugit possimus nisi, quis sit magni, culpa, laudantium quam enim. Ad delectus beatae, ipsum explicabo dolore!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minus animi, tenetur modi est fugit possimus nisi, quis sit magni, culpa, laudantium quam enim. Ad delectus beatae, ipsum explicabo dolore!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minus animi, tenetur modi est fugit possimus nisi, quis sit magni, culpa, laudantium quam enim. Ad delectus beatae, ipsum explicabo dolore!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore minus animi, tenetur modi est fugit possimus nisi, quis sit magni, culpa, laudantium quam enim. Ad delectus beatae, ipsum explicabo dolore!
+    </div>
+    <div class="mainblock">
+      <h1>Main content block</h1>
+    </div>
+  </div>
+
+
+</body>
+</html>
