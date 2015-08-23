@@ -5,7 +5,12 @@
     "Vladyslav Dovzhenko <vlad.dovzhenko@gmail.com>"
   ],
   "description": "directive makes element stick when scrolling down and if it's height bigger when viewport when it is scrolls to bottom when scrolling down and vice versa",
-  "main": "ng-sticky-float-container.js",
+  "main": "./src/ng-sticky-float-container.js",
+  "keywords": [
+    "sticky",
+    "float",
+    "scroll"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -14,9 +19,13 @@
     "test",
     "tests"
   ],
+  "homepage": "http://js-padavan.github.io/ng-sticky-float-container/",
   "dependencies": {
     "angular": "~1.2",
-    "jquery": "*",
-    "jquery-transform": "*"
+    "jquery": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/js-padavan/ng-sticky-float-container.git"
   }
 }
