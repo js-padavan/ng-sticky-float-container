@@ -118,18 +118,18 @@ angular.module('ng-sticky', [])
       }
 
       //------------------------ WATCHERS -------------------------------------
-      if (attrs.enableWatcher === 'true') {
-        scope.$watch(function() {
-          //ОСТОРОЖНО ХАК! приходится наблюдать через timeout т.к. модель поменять успевает, а вьюха еще нет
-          setTimeout(function() {
-            var top = $element.parent().offset().top;
-            if (top != initialTop) {
-              initialTop = top;
-              $element.css('top', top);
-            }
-          })
-        })
-      }
+      // if (attrs.enableWatcher === 'true') {
+      //   scope.$watch(function() {
+      //     //ОСТОРОЖНО ХАК! приходится наблюдать через timeout т.к. модель поменять успевает, а вьюха еще нет
+      //     setTimeout(function() {
+      //       var top = $element.parent().offset().top;
+      //       if (top != initialTop) {
+      //         initialTop = top;
+      //         $element.css('top', top);
+      //       }
+      //     })
+      //   })
+      // }
 
       scope.$watch(function() {
         return $element.height();
